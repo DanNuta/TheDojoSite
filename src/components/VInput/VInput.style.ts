@@ -1,8 +1,16 @@
 import styled, {keyframes } from "styled-components";
 
-export const InputStyle = styled.input`
+
+interface Style {
+  bottom?: string,
+  error?: number | null
+}
+
+
+export const InputStyle = styled.input<Style>`
 width: 100%;
-border: 1px solid #B2B0BF;
+border-width: 1px;
+border-style: solid;
 border-radius: 10px;
 height: 100%;
 box-sizing: border-box;
@@ -10,6 +18,9 @@ padding-left: 15px;
 outline: none;
 transition-duration: .5s;
 transition: all;
+border-color: ${props => props.error === 0 && "rgba(236, 93, 74, 1)" ||
+                     props.error === null && "rgba(178, 176, 191, 1)"
+  };
 
 
 &:focus{
@@ -27,9 +38,10 @@ font-size: 11px;
 margin-bottom: 11px;
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<Style>`
   display: flex;
   flex-direction: column;
+  margin-bottom: ${props => props.bottom};
 `;
 
 

@@ -9,11 +9,11 @@ import { icons } from "../../assets";
 export const VInputText = React.forwardRef<HTMLInputElement, InputType>(
   (props, ref) => {
     return (
-      <Style.Container>
+      <Style.Container bottom={props.bottom}>
 
         <Style.LabelStyle htmlFor={props.title}>{props.title}</Style.LabelStyle>
         <Style.Div>
-          <Style.InputStyle id={props.title} type={props.type} ref={ref} />
+          <Style.InputStyle error={props.error} id={props.title} type={props.type} ref={ref} />
           <Style.IconStyle>{props.icon}</Style.IconStyle>
         </Style.Div>
 
@@ -34,11 +34,12 @@ export const VInputPassword = React.forwardRef<HTMLInputElement, InputType>(
     }
 
     return (
-      <Style.Container>
+      <Style.Container bottom={props.bottom}>
         <Style.LabelStyle htmlFor={props.title}>{props.title}</Style.LabelStyle>
        
        <Style.Div>
         <Style.InputStyle
+          error={props.error}
           id={props.title}
           type={hideShowPassword ? "text" : "password"}
           ref={ref}

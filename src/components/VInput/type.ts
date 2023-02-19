@@ -1,6 +1,7 @@
 export interface InputType {
   title: string;
   type: string;
-  //value: string,
+  bottom?: string,
   icon?: React.ReactNode;
+  error: number | null
 }

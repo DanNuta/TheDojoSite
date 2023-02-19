@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import React from "react";
 
 export const Login: React.FC = () => {
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<number | null>(null);
 
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
@@ -11,11 +11,20 @@ export const Login: React.FC = () => {
   function submitData(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    console.log(emailRef.current?.value);
-    console.log(passwordRef.current?.value);
+    if(emailRef.current?.value.length && passwordRef.current?.value){
+      setError(prev => prev = 1)
+    }else{
+      setError(prev => prev = 0)
+    }
+
   }
 
   return (
-    <LoginView submit={submitData} email={emailRef} password={passwordRef} />
+    <LoginView 
+     submit={submitData} 
+     email={emailRef} 
+     password={passwordRef}
+     error={error}
+      />
   );
 };

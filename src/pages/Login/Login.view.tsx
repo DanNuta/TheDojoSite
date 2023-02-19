@@ -9,13 +9,23 @@ export const LoginView: React.FC<LoginType> = (props: LoginType) => {
     <Style.FormStyle onSubmit={props.submit}>
       <Style.h1>Log in</Style.h1>
       <VInputText
+        bottom="15px"
         icon={icons.email}
         title="E-Mail"
         type="text"
         ref={props.email}
+        error={props.error}
       />
-      <VInputPassword title="Password" type="password" ref={props.password} />
-      <VButton title="CLick" />
+      <VInputPassword 
+        bottom="24px" 
+        title="Password" 
+        type="password" 
+        ref={props.password}
+        error={props.error}
+         />
+      <VButton 
+        error={props.error} 
+        title="CLick" />
     </Style.FormStyle>
     </Style.Container>
   );
