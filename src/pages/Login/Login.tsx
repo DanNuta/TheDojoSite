@@ -11,8 +11,8 @@ export const Login: React.FC = () => {
   function submitData(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    console.log(emailRef.current);
-    console.log(passwordRef.current);
+    console.log(emailRef.current?.value);
+    console.log(passwordRef.current?.value);
   }
 
   return (

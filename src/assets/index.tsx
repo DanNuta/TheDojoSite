@@ -2,6 +2,7 @@ import {
   AiOutlineMail,
   AiOutlineEyeInvisible,
   AiOutlineEye,
+  FaCheck
 } from "./icon/icon";
 
 interface IconType {
@@ -12,4 +13,6 @@ export const icons: IconType = {
   email: <AiOutlineMail />,
   eyeShow: <AiOutlineEye />,
   eyeHidden: <AiOutlineEyeInvisible />,
+  verify: <FaCheck/>
+
 };

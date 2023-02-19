@@ -10,14 +10,20 @@ export const VInputText = React.forwardRef<HTMLInputElement, InputType>(
   (props, ref) => {
     return (
       <Style.Container>
-        <Style.LabelStyle htmlFor={props.title}>{props.title}</Style.LabelStyle>
-        <Style.InputStyle id={props.title} type={props.type} ref={ref} />
 
-        {props.icon}
+        <Style.LabelStyle htmlFor={props.title}>{props.title}</Style.LabelStyle>
+        <Style.Div>
+          <Style.InputStyle id={props.title} type={props.type} ref={ref} />
+          <Style.IconStyle>{props.icon}</Style.IconStyle>
+        </Style.Div>
+
       </Style.Container>
     );
   }
 );
+
+
+
 
 export const VInputPassword = React.forwardRef<HTMLInputElement, InputType>(
   (props, ref) => {
@@ -30,6 +36,8 @@ export const VInputPassword = React.forwardRef<HTMLInputElement, InputType>(
     return (
       <Style.Container>
         <Style.LabelStyle htmlFor={props.title}>{props.title}</Style.LabelStyle>
+       
+       <Style.Div>
         <Style.InputStyle
           id={props.title}
           type={hideShowPassword ? "text" : "password"}
@@ -42,6 +50,10 @@ export const VInputPassword = React.forwardRef<HTMLInputElement, InputType>(
             onHandler={showHidePassword}
           />
         }
+
+
+       </Style.Div>
+
       </Style.Container>
     );
   }

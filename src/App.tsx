@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { Home, Login } from "./pages";
 import { RootNav } from "./layouts/RootNav";
+import GlobalStyle from './css/GlobalStyle';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,7 +21,12 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+    <GlobalStyle/>
+     <RouterProvider router={router} />
+    </>
+  )
 }
 
 export default App;
