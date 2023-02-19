@@ -1,13 +1,18 @@
-import { VInput, VButton } from "../../components";
+import { VInputText, VInputPassword, VButton } from "../../components";
 import * as Style from "./Login.style";
 import { LoginType } from "./type";
-import {icons} from "../../assets"
+import { icons } from "../../assets";
 
 export const LoginView: React.FC<LoginType> = (props: LoginType) => {
   return (
     <Style.FormStyle onSubmit={props.submit}>
-      <VInput icon={icon.email} title="email" type="text" ref={props.email} />
-      <VInput title="password" type="password" ref={props.password} />
+      <VInputText
+        icon={icons.email}
+        title="email"
+        type="text"
+        ref={props.email}
+      />
+      <VInputPassword title="password" type="password" ref={props.password} />
       <VButton title="CLick" />
     </Style.FormStyle>
   );

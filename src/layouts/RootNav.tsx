@@ -14,10 +14,9 @@ export const RootNav: React.FC = () => {
         </ul>
       </nav>
 
-
       <main>
         <Outlet />
-        </main>
+      </main>
     </div>
   );
 };

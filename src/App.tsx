@@ -12,7 +12,7 @@ import { RootNav } from "./layouts/RootNav";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/"  element={<RootNav/>}>
+    <Route path="/" element={<RootNav />}>
       <Route index element={<Home />} />
       <Route path="/login" element={<Login />} />
     </Route>

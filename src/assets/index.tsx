@@ -1,8 +1,15 @@
-import {AiOutlineMail, AiOutlineEyeInvisible, AiOutlineEye} from "./icon/icon";
-
+import {
+  AiOutlineMail,
+  AiOutlineEyeInvisible,
+  AiOutlineEye,
+} from "./icon/icon";
 
 interface IconType {
-    icon: React.ReactNode,
+  [key: string]: React.ReactNode;
 }
 
-export const icons: IconType = {}
+export const icons: IconType = {
+  email: <AiOutlineMail />,
+  eyeShow: <AiOutlineEye />,
+  eyeHidden: <AiOutlineEyeInvisible />,
+};
