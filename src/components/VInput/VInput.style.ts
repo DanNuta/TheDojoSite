@@ -22,6 +22,10 @@ border-color: ${props => props.error === 0 && "rgba(236, 93, 74, 1)" ||
                      props.error === null && "rgba(178, 176, 191, 1)"
   };
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 
 &:focus{
   transition-duration: .5s;

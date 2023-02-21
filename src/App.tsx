@@ -7,8 +7,8 @@ import {
   Link,
   createRoutesFromElements,
 } from "react-router-dom";
-import { Home, Login } from "./pages";
-import { RootNav } from "./layouts/RootNav";
+import { Home, Login, SignUp } from "./pages";
+import { RootNav } from "./layouts/RootNav/RootNav";
 import GlobalStyle from './css/GlobalStyle';
 
 const router = createBrowserRouter(
@@ -16,6 +16,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootNav />}>
       <Route index element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
     </Route>
   )
 );

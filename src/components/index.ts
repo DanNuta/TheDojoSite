@@ -1,5 +1,18 @@
-import { VInputPassword, VInputText } from "./VInput/VInput";
+import { VInputPasswordLogin, 
+         VInputTextLogin, 
+         VInputPasswordSignUp,
+         VInputTextSignUp
+        } from "./VInput/VInput";
 import { VButton } from "./VButton/VButton";
 import { VHideShowPassword } from "./VHideShowPassword/VHideShowPassword";
+import { VFormBox } from "./VFormBox/VFormBox";
 
-export { VInputPassword, VButton, VHideShowPassword, VInputText };
+export {
+        VInputPasswordLogin, 
+        VButton, 
+        VHideShowPassword, 
+        VInputTextLogin, 
+        VFormBox,
+        VInputPasswordSignUp,
+        VInputTextSignUp
+};

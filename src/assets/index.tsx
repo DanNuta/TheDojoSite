@@ -3,7 +3,9 @@ import {
   AiOutlineEyeInvisible,
   AiOutlineEye,
   FaCheck,
-  GiCancel
+  GiCancel,
+  BsPerson,
+  AiOutlineFileImage
 } from "./icon/icon";
 
 interface IconType {
@@ -15,5 +17,7 @@ export const icons: IconType = {
   eyeShow: <AiOutlineEye />,
   eyeHidden: <AiOutlineEyeInvisible />,
   verify: <FaCheck/>,
-  cancel: <GiCancel/>
+  cancel: <GiCancel/>,
+  person: <BsPerson/>,
+  file: <AiOutlineFileImage/>
 };

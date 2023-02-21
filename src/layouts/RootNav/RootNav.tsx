@@ -1,8 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
+import * as Style from "./RootNav.style";
 
 export const RootNav: React.FC = () => {
   return (
-    <div>
+    <Style.Container>
       <nav>
         <ul>
           <li>
@@ -11,12 +12,18 @@ export const RootNav: React.FC = () => {
           <li>
             <Link to="login">login</Link>
           </li>
+
+          <li>
+            <Link to="signup">login</Link>
+          </li>
         </ul>
       </nav>
 
-      <main>
-        <Outlet />
-      </main>
-    </div>
+      <Style.Main>
+        <Style.Container>
+          <Outlet />
+        </Style.Container>
+      </Style.Main>
+    </Style.Container>
   );
 };
